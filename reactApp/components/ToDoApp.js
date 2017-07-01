@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import InputLine from './InputLine.js'
-import ToDoList form './ToDoList.js'
+import ToDoList from './ToDoList.js'
 
 const dummyData = [{ taskText: "Catch", completed: false }, { taskText: "Catch 'em", completed: true }, { taskText: "Catch 'em all", completed: false }]
 
