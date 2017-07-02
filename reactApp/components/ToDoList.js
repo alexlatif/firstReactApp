@@ -5,8 +5,9 @@ import ToDo from './ToDo.js'
 class ToDoList extends React.Component {
 
   list(){
-    return this.props.todos.map((item) => (
-      <ToDo key={item.taskText} item={item.taskText} completed={item.completed} onClick={()=>this.props.onClick(item.completed)}/>
+    return this.props.todos.map((item, index) => (
+      <ToDo key={item._id} xClick={()=>(this.props.xClick(item._id))} item={item.task}
+        completed={item.completed} toggleCompletion={()=>this.props.toggleCompletion(item._id)}/>
     ))
   }
 

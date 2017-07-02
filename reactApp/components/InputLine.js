@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class InputLine extends React.Component {
-  render(){
-    return(
-      <div>
-        <input type="text" placeholder="Add item"></input>
-        <button id="add" type="submit">Send</button>
-      </div>
+function InputLine(props) {
+  return(
+    <form>
+
+      <input type="text" value={props.text} placeholder="Add item" onChange={(e)=>
+        (props.updateText(e.target.value))}></input>
+
+        <button id="add" onClick={(e)=> {
+          e.preventDefault()
+          props.submit()
+        }}>Send</button>
+
+      </form>
     )
   }
-}
 
 export default InputLine
